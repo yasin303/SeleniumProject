@@ -1,4 +1,4 @@
-package yasin.stepdef;
+package com.yasin.stepdef;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -8,7 +8,6 @@ import io.cucumber.java.en.When;
 public class LoginStepdef {
     @Given("user is on login page")
     public void userIsOnLoginPage() {
-
     }
 
     @When("user input username text box with {string}")
