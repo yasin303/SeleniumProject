@@ -7,7 +7,7 @@ Feature: Login
     And user click login button
     Then user will redirect to hompage
 
-  Scenario: Login with valid username and password
+  Scenario: Login with invalid username and password
     Given user is on login page
     When user input username text box with "standarduser"
     And user input password text box with "secretsauce"
