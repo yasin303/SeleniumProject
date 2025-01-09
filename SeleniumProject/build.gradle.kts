@@ -19,6 +19,6 @@ dependencies {
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.11.4")
 }
 
-tasks.test {
-    useJUnit()
-}
+//tasks.test {
+//    useJUnit()
+//}
