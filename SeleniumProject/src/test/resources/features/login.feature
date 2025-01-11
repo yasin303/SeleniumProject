@@ -7,7 +7,7 @@ Feature: Login
     When user input username text box with "standard_user"
     And user input password text box with "secret_sauce"
     And user click login button
-    Then user will redirect to hompage
+    Then user is on homepage
 
   @invalid-login
   Scenario: Login with invalid username and password
