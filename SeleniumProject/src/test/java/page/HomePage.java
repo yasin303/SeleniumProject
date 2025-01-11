@@ -2,19 +2,22 @@ package page;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class HomePage {
-    WebDriver driver;
-
     By productItem = By.xpath("//*[@id=\"item_4_title_link\"]/div");
+    private WebDriver driver;
 
     public HomePage(WebDriver driver){
         this.driver = driver;
     }
 
     public void validateProductItemDisplayed(){
-        assertTrue(driver.findElement(productItem).isDisplayed());
+        WebElement productElement = driver.findElement(productItem);
+        assertTrue(productElement.isDisplayed());
+        assertEquals("Sauce Labs Backpack", productElement.getText());
     }
 }
