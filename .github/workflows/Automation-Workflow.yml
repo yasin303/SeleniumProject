@@ -39,3 +39,10 @@ jobs:
     - name: Execute gradlew
       run: ./gradlew cucumber
       working-directory: ./SeleniumProject
+
+    # Upload HTML report as an artifact
+    - name: Upload HTML Report
+      uses: actions/upload-artifact@v3
+      with:
+        name: cucumber-html-report
+        path: ./SeleniumProject/build/reports/cucumber-html-reports
